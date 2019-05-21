@@ -90,7 +90,7 @@ public class HuevoSorpresaTest {
         int unidades = 10;
         double dinero = 15;
         HuevoSorpresaPabloYuukiShirakawa instance = new HuevoSorpresaPabloYuukiShirakawa(200,1,"Peppa Pig",2);
-        instance.sacarHuevosSorpresas(unidades,dinero);
+        instance.sacarHuevosSorpresas(unidades,dinero, minion);
         assertTrue(instance.obtenerUnidades()==190); /* Como inicialmente hay 200 huevos sorpresa en la tienda
         y saco 10, deben quedar 190 huevos sorpresas en la máquina si todo ha ido bien. */
     }
@@ -106,7 +106,7 @@ public class HuevoSorpresaTest {
         double dinero = 15;
         HuevoSorpresaPabloYuukiShirakawa instance = new HuevoSorpresaPabloYuukiShirakawa(200,1,"Peppa Pig",2);
         try{
-            instance.sacarHuevosSorpresas(unidades,dinero);
+            instance.sacarHuevosSorpresas(unidades,dinero, minion);
             fail("La prueba falla si no salta una excepción con un valor negativo");
          } catch (Exception e){
                  assertTrue(instance.obtenerUnidades()==200); /* Como parto de una cantidad de 200 huevos sorpresa
@@ -126,7 +126,7 @@ public class HuevoSorpresaTest {
         double dinero = 15;
         HuevoSorpresaPabloYuukiShirakawa instance = new HuevoSorpresaPabloYuukiShirakawa(200,1,"Peppa Pig",2);
         try{
-            instance.sacarHuevosSorpresas(unidades,dinero);
+            instance.sacarHuevosSorpresas(unidades,dinero, minion);
             fail("La prueba falla si no salta una excepción al intentar sacar 0 huevos sorpresas");
          } catch (Exception e){
                  assertTrue(instance.obtenerUnidades()==200); /* Como parto de una cantidad de 200 huevos sorpresas
@@ -146,7 +146,7 @@ public class HuevoSorpresaTest {
         double dinero = 300;
         HuevoSorpresaPabloYuukiShirakawa instance = new HuevoSorpresaPabloYuukiShirakawa(200,1,"Peppa Pig",2);
         try{
-            instance.sacarHuevosSorpresas(unidades,dinero);
+            instance.sacarHuevosSorpresas(unidades,dinero, minion);
             fail("La prueba falla si no salta una excepción al intentar sacar más huevos sorpresas de las que tiene la tienda");
          } catch (Exception e){
                  assertTrue(instance.obtenerUnidades()==200); /* Como parto de una cantidad de 200 huevos sorpresas
@@ -166,7 +166,7 @@ public class HuevoSorpresaTest {
         double dinero = 1;
         HuevoSorpresaPabloYuukiShirakawa instance = new HuevoSorpresaPabloYuukiShirakawa(200,1,"Peppa Pig",2);
         try{
-            instance.sacarHuevosSorpresas(unidades,dinero);
+            instance.sacarHuevosSorpresas(unidades,dinero, minion);
             fail("La prueba falla si no salta una excepción al intentar sacar más huevos sorpresas de las que tiene la máquina");
          } catch (Exception e){
                  assertTrue(instance.obtenerUnidades()==200); /* Como parto de una cantidad de 200 huevos sorpresas
