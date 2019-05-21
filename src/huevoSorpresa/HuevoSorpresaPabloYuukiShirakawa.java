@@ -1,16 +1,41 @@
 package huevoSorpresa;
+/**
+ * La clase HuevoSorpresa
+ * @author Pablo Yuuki Shirakawa
+ */
 public class HuevoSorpresaPabloYuukiShirakawa {
+    /**
+     * número de huevos que quedan 
+     */
     private int unidades;//número de huevos que quedan 
+    /**
+     * precio actual de un huevo sorpresa
+     */
     private double precio;//precio actual de un huevo sorpresa
+    /**
+     * nombre de la sorpresa que incluye huevo sorpresa
+     */
     private String sorpresa;//nombre de la sorpresa que incluye huevo sorpresa
+    /**
+     * precio máximo que puede tener un huevo sorpresa
+     */
     private double precio_max;//precio máximo que puede tener un huevo sorpresa
     
     
-/*Constructor por defecto*/
+
+    /**
+     * Constructor por defecto
+     */
 public HuevoSorpresaPabloYuukiShirakawa(){}
 
 
-/*Constructor por parámetros*/
+/**
+ * Constructor por parámetros
+ * @param unidades número de huevos que quedan 
+ * @param precio precio actual de un huevo sorpresa
+ * @param sorpresa nombre de la sorpresa que incluye huevo sorpresa
+ * @param precio_max  precio máximo que puede tener un huevo sorpresa
+ */
 public HuevoSorpresaPabloYuukiShirakawa(int unidades, double precio, String sorpresa, double precio_max){
     this.unidades=unidades;
     this.precio=precio;
@@ -19,20 +44,35 @@ public HuevoSorpresaPabloYuukiShirakawa(int unidades, double precio, String sorp
 }
 
 
-/*Método que devuelve el número de huevos sorpresa que tiene la tienda*/
+/**
+ * Método que devuelve el número de huevos sorpresa que tiene la tienda
+ * @return número de huevos que quedan 
+ */
 public int obtenerUnidades(){return this.getUnidades();}
 
-/*Método que devuelve el precio que tiene cada huevo sorpresa*/
+/**
+ * Método que devuelve el precio que tiene cada huevo sorpresa
+ * @return  precio actual de un huevo sorpresa
+ */
 public double obtenerPrecio(){return this.getPrecio();}
 
 
 
-/*Método que permite modificar el número de huevos sorpresa que tiene la tienda*/
+/**
+ * Método que permite modificar el número de huevos sorpresa que tiene la tienda
+ * @param unidades  número de huevos que quedan 
+ */
 public void modificarUnidades(int unidades){this.setUnidades(unidades);}
 
 
-/*Método que permite sacar huevos sopresa si se tiene suficiente dinero y hay 
-suficientes huevos sorpresas, este método se probará con JUnit*/
+/**
+ * Método que permite sacar huevos sopresa si se tiene suficiente dinero y hay 
+ *   suficientes huevos sorpresas, este método se probará con JUnit
+ * @param unidades número de huevos que quedan 
+ * @param dinero cantidad de dinero que dispones
+ * @param sorpresa nombre de la sorpresa que incluye huevo sorpresa
+ * @throws Exception 
+ */
 public void sacarHuevosSorpresas(int unidades, double dinero, String sorpresa) throws Exception{
    if (dinero <= 0) {
    	throw new Exception("Se necesita una cantidad de dinero positiva");
@@ -50,8 +90,12 @@ public void sacarHuevosSorpresas(int unidades, double dinero, String sorpresa) t
 }
 
 
-/*Método que permite aumentar el precio de venta de un huevo sorpresa, suma al precio actual el aumento 
-que se indica siempre que no se sobrepase el precio máximo de venta, este método se probará con JUnit*/
+/**
+ * Método que permite aumentar el precio de venta de un huevo sorpresa, suma al precio actual el aumento 
+ *   que se indica siempre que no se sobrepase el precio máximo de venta, este método se probará con JUnit
+ * @param aumento el nuevo precio a la que quieres aumentar
+ * @throws Exception Devuelve una excepción si el nuevo precio es menor que el actuar o supera el maximo permitido
+ */
 public void aumentarPrecio(double aumento) throws Exception{
     if(aumento <= 0) {
         throw new Exception("El aumento debe ser positivo");
@@ -63,56 +107,56 @@ public void aumentarPrecio(double aumento) throws Exception{
 }
 
     /**
-     * @return the unidades
+     * @return Te devuelve la unidad
      */
     public int getUnidades() {
         return unidades;
     }
 
     /**
-     * @param unidades the unidades to set
+     * @param unidades La unidad que quiere establecer
      */
     public void setUnidades(int unidades) {
         this.unidades = unidades;
     }
 
     /**
-     * @return the precio
+     * @return Devuelve el precio
      */
     public double getPrecio() {
         return precio;
     }
 
     /**
-     * @param precio the precio to set
+     * @param precio El precio que quieres establecer
      */
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
     /**
-     * @return the sorpresa
+     * @return  sorpresa  Devuelve la sorpresa que contiene
      */
     public String getSorpresa() {
         return sorpresa;
     }
 
     /**
-     * @param sorpresa the sorpresa to set
+     * @param sorpresa La sorpresa que quieres establecer
      */
     public void setSorpresa(String sorpresa) {
         this.sorpresa = sorpresa;
     }
 
     /**
-     * @return the precio_max
+     * @return the precio_max Te devuelve el precio maximo establecido
      */
     public double getPrecio_max() {
         return precio_max;
     }
 
     /**
-     * @param precio_max the precio_max to set
+     * @param precio_max El precio maximo que quieres establecer
      */
     public void setPrecio_max(double precio_max) {
         this.precio_max = precio_max;
